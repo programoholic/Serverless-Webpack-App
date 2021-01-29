@@ -1,0 +1,28 @@
+{
+  "name": "serverless-webpack-app",
+  "version": "1.0.0",
+  "description": "a demo application to show how webpack works with serverless",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "serverless",
+    "webpack",
+    "nodejs",
+    "aws-lambda"
+  ],
+  "author": "Anis Alam (programoholic)",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "fork-ts-checker-webpack-plugin": "^6.1.0",
+    "serverless-webpack": "^5.3.5",
+    "terser-webpack-plugin": "^5.1.1",
+    "ts-loader": "^8.0.14",
+    "webpack": "^5.18.0",
+    "webpack-node-externals": "^2.5.2"
+  }
+}
