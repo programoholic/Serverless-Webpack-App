@@ -15,6 +15,7 @@
   "author": "Anis Alam (programoholic)",
   "license": "ISC",
   "dependencies": {
+    "@types/lodash": "^4.14.168",
     "lodash": "^4.17.20"
   },
   "devDependencies": {
@@ -22,6 +23,7 @@
     "serverless-webpack": "^5.3.5",
     "terser-webpack-plugin": "^5.1.1",
     "ts-loader": "^8.0.14",
+    "typescript": "^4.1.3",
     "webpack": "^5.18.0",
     "webpack-node-externals": "^2.5.2"
   }

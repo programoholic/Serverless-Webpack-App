@@ -1,1 +1,41 @@
+service: serverless-webpack-app
+provider: 
+  name: aws
+  region: us-east-1
 
+functions:
+  helloLambda:
+    runtime: nodejs12.x
+    timeout: 30
+    handler: src/helloLambda.handler
+  testLambda:
+    runtime: nodejs12.x
+    timeout: 30
+    handler: src/testLambda.handler    
+  func-abc:
+    handler: src/test.handler
+    events:
+      - http:
+          path: /user/{user-id}/
+          method: GET
+          parameters:
+            paths:
+              user-id: true
+          cors: true  
+
+package:
+  individually: true
+
+plugins:
+  - serverless-webpack
+
+custom:
+  webpack:
+    webpackConfig: './webpack.config.js'
+    packager: 'npm'
+    includeModules:
+      forceExclude:
+        - aws-sdk
+
+     
+  
